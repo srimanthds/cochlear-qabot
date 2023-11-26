@@ -14,7 +14,11 @@ import shutil
 import time
 from langchain.docstore.document import Document
 import fitz
-
+import pysqlite3
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import streamlit as st
+import sqlite3
 
 def generate_response(uploaded_file, openai_api_key, query_text):
     # Load document if file is uploaded
