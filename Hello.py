@@ -70,7 +70,7 @@ query_text = st.text_input('Enter your question:', placeholder = 'Please provide
 result = []
 with st.form('myform', clear_on_submit=True):
     # openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=not (uploaded_file and query_text))
-    openai_api_key = "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"
+    openai_api_key = "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"
     submitted = st.form_submit_button('Submit', disabled=not(uploaded_file and query_text))
     if submitted and openai_api_key.startswith('sk-'):
         with st.spinner('Calculating...'):
