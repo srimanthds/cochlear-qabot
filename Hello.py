@@ -14,11 +14,27 @@ import shutil
 import time
 from langchain.docstore.document import Document
 import fitz
-import pysqlite3
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-import streamlit as st
-import sqlite3
+# import pysqlite3
+# import sys
+# sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# import streamlit as st
+# import sqlite3
+
+# chroma_version = Chroma.__version__
+
+# # Check if the version is 0.4 or later
+# if float(chroma_version) >= 0.4:
+#     # Use the new configuration
+#     _client_settings = chromadb.config.Settings(
+#         chroma_db_impl="new_configuration",
+#         persist_directory=persist_directory,
+#     )
+# else:
+#     # Use the old configuration
+#     _client_settings = chromadb.config.Settings(
+#         chroma_db_impl="duckdb+parquet",
+#         persist_directory=persist_directory,
+#     )
 
 def generate_response(uploaded_file, openai_api_key, query_text):
     # Load document if file is uploaded
